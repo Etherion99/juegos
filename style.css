@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,700;1,400&display=swap');
+
+
+
+
+:root{/*Pseudo clase para declarar variables*/
+  --background: linear-gradient(135deg, rgba(4, 132, 29, 0.494)  0%, rgba(245, 26, 15, 0.242) 100%);
+  --color-primary: #FF2700;
+  --color-secondary: #764ba2;
+  --boton-padding: 20px, 40px;
+}
+
+body{
+  font-family: 'Raleway', sans-serif;
+}
+
+.container{
+  width: 90%;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 80px 0;
+  max-width: 1200px;
+}
+
+.subtitle{
+  color: var(--color-primary);
+  font-size: 2.5rem;
+  margin-bottom: 35px;
+}
+
+.hero{
+  height: 100vh;
+  background-image: var(--background), url('../assets/hero.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  position: relative;
+ 
+}
+
+/*Los elementos hero de container no tendrán padding*/
+.hero .container{
+  padding: 0;
+}
+
+/*Elementos de Navegación*/
+.nav{
+  
+  display: flex;
+  justify-content: flex-end;
+  height: 70px;
+  align-items: center;
+  font-weight: 700;
+
+  
+}
+
+.desplegable{
+  display: none;
+  list-style: none;
+  padding: 0px;
+}
+li{
+  padding: 3px
+}
+
+.nav a:hover, li:hover{
+  color:rgb(0, 0, 0); 
+}
+
+a:hover .desplegable{
+  display: block; 
+  position: absolute;
+  list-style: none;
+  color:#fff;
+}
+
+.nav2{
+  margin:0%;
+  display: flex;  
+  justify-content: flex-start;
+  float: left;
+  height: 70px;
+  align-items: center;
+  font-weight: 700;
+}
+
+
+
+/*Pie de página*/
+.nav--footer{
+  font-weight: 700;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/*Items de navegación*/
+.nav__items{
+  color: #fff;
+  text-decoration: none;
+  margin-right: 2px;
+  padding: 10px 15px;
+  font-weight: inherit;
+
+}
+
+.nav__items--cta{
+  border: 1px solid #fff;
+}
+
+
+
+/*Items pie de página*/
+.nav__items--footer{
+  padding: 5px;
+}
+
+.hero__container{
+  display: flex;
+  height: calc(100vh - 70px);
+  align-items: center;
+  
+  
+}
+
+.hero__texts{
+  width: 80%;
+  margin-bottom: 50px;
+  
+}
+
+.hero__title{
+  color: rgb(65, 3, 104);
+  font-size: 3.2rem;
+  text-shadow: 1px  0px 0px rgb(255, 255, 255),
+               0px  1px 0px rgb(255, 255, 255),
+              -1px  0px 0px rgb(255, 255, 255),
+               0px -1px 0px rgb(255, 255, 255);
+}
+
+.hero__subtitle{
+  color: white;
+  font-size: 2rem;
+  font-weight: 300;
+  margin: 15px 0;
+  text-shadow: 0.5px  0px 0px rgb(0, 0, 0),
+               0px  0.5px 0px rgb(0, 0, 0),
+              -0.5px  0px 0px rgb(0, 0, 0),
+               0px -0.5px 0px rgb(0, 0, 0);
+}
+
+.hero__wave{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+}
+
+/*Hasta aquí va lo de arriba*/
+
+.info{
+  padding-top: 0;
+  text-align: left;
+  
+}
+
+img{
+  float: left;
+}
+.info__picture{
+  clear: left;
+  width: 200px;
+  height: 200px;
+  border: 2px solid #000;
+  margin-bottom: 10px;
+  margin-right: 20px;
+  object-fit: cover; 
+ /*  */
+}
+
+
+h3.nombre{
+   color: var(--color-primary);
+}
+h3.consola{
+  color: var(--color-secondary);
+
+}
+h3{
+  display: inline-flex;
+  justify-content: flex-start;
+
+}
+
+.marco{
+   clear: both;
+   border: 2px solid #000;
+   padding: 2px;
+   margin: 4px;
+   min-height:210px;
+}
+
+
+
+/*Pie de Página*/
+
+.footer{
+  background-color: var(--color-primary);
+}
+
+
+
+
+#wrapper {
+  
+  overflow: hidden;
+  transition: height 200ms;
+}
