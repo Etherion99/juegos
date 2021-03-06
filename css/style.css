@@ -28,7 +28,7 @@ body {
 
 .hero {
     height: 100vh;
-    background-image: var(--background), url('assets/hero.jpg');
+    background-image: var(--background), url('../assets/hero.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -251,6 +251,4 @@ a {
     transform: scale(1.12);
 }
 
-#myDIV{
-    overflow: visible;
-}
+
