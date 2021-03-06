@@ -11,8 +11,7 @@ $(document).ready(function (e) {
 
         postsHTML += `<div class="marco gb year-${post.year} studio-${post.studio} ${categories} ${consoles}">
             <img src="${post.photo}" class="info__picture">
-            <h3 class="consola">${post.console}</h3>
-            <h3 class="nombre">${post.name}</h3>
+                <h3 class="nombre">${post.name}</h3>
             <p class="info__copy">${post.description}</p>
         </div>`;
     }
@@ -46,7 +45,7 @@ $(document).ready(function (e) {
 
     $("#myInput").on("keyup", function () {
         var value = $(this).val().toLowerCase();
-        $("#myDIV .marco").filter(function () {
+        $("#posts .marco").filter(function () {
             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
     });
