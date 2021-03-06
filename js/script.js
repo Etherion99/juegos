@@ -18,18 +18,18 @@ $(document).ready(function (e) {
             <p class="info__copy">${post.description}</p>
         </div>`;
 
-        if(!filterOpts.studio.includes(post.studio)){
+        if (!filterOpts.studio.includes(post.studio)) {
             filterOpts.studio.push(post.studio);
         }
 
-        for(var i = 0; i < post.categories.length; i++){
-            if(!filterOpts.category.includes(post.categories[i])){
+        for (var i = 0; i < post.categories.length; i++) {
+            if (!filterOpts.category.includes(post.categories[i])) {
                 filterOpts.category.push(post.categories[i]);
             }
         }
 
-        for(var i = 0; i < post.consoles.length; i++){
-            if(!filterOpts.console.includes(post.consoles[i])){
+        for (var i = 0; i < post.consoles.length; i++) {
+            if (!filterOpts.console.includes(post.consoles[i])) {
                 filterOpts.console.push(post.consoles[i]);
             }
         }
@@ -37,26 +37,35 @@ $(document).ready(function (e) {
 
     $("#posts").html(postsHTML);
 
-    $(".filter").each(function(){
+    $(".filter").each(function () {
         var type = $(this).attr("data-type");
-
-        for(var option of filterOpts[type]){
+        for (var option of filterOpts[type]) {
             $(this).append(`<option value='${option}'>${option}</option>`);
         }
     });
 
-    $(".filter").change(function (){
-        $(".marco").hide();
+    function seleccionados() {
         var selector = "";
-        $('.filter').each(function(){
-            if ($(this).val()!=""){
+        $('.filter').each(function () {
+            if ($(this).val() !== "") {
                 selector += "." + $(this).attr("data-type") + "-" + $(this).val();
             }
         });
-        console.log(selector);
-        $(selector).show()
-    });
+        return selector;
+    }
 
+    function filtering() {
+        var value = $("#myInput").val().toLowerCase();
+        console.log("#posts .marco" + seleccionados());
+        $(".marco").hide();
+        $("#posts .marco" + seleccionados()).filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+        });
+    }
+
+    $(".filter").change(filtering);
+
+    $("#myInput").on("keyup", filtering);
 
     $("#gb_button, .gb_button").click(function () {
         $(".ds").hide();
@@ -80,13 +89,6 @@ $(document).ready(function (e) {
         $(".ds").show();
         $(".n64").show();
         $(".gb").show();
-    })
-
-    $("#myInput").on("keyup", function () {
-        var value = $(this).val().toLowerCase();
-        $("#posts .marco").filter(function () {
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-        });
     });
 });
 
