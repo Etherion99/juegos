@@ -1,6 +1,9 @@
 $(document).ready(function (e) {
-    //filtros
-    var filters = ["category", "year", "studio", "console"];
+    var filterOpts = {
+        studio: [],
+        category: [],
+        console: []
+    }
 
     //generación automática de posts
     var postsHTML = "";
@@ -14,9 +17,43 @@ $(document).ready(function (e) {
             <h3 class="nombre">${post.name}</h3>
             <p class="info__copy">${post.description}</p>
         </div>`;
+
+        if(!filterOpts.studio.includes(post.studio)){
+            filterOpts.studio.push(post.studio);
+        }
+
+        for(var i = 0; i < post.categories.length; i++){
+            if(!filterOpts.category.includes(post.categories[i])){
+                filterOpts.category.push(post.categories[i]);
+            }
+        }
+
+        for(var i = 0; i < post.consoles.length; i++){
+            if(!filterOpts.console.includes(post.consoles[i])){
+                filterOpts.console.push(post.consoles[i]);
+            }
+        }
     }
 
     $("#posts").html(postsHTML);
+
+    $(".filter").each(function(){
+        var type = $(this).attr("data-type");
+
+        for(var option of filterOpts[type]){
+            $(this).append(`<option value='${option}'>${option}</option>`);
+        }
+    });
+
+    $(".filter").change(function (){
+        var type = $(this).attr("data-type");
+
+        filters[type] = $(this).val();
+        /*
+
+        $(".marco").hide();
+        $("." + type + "-" + $(this).val()).show();*/
+    });
 
 
     $("#gb_button, .gb_button").click(function () {
