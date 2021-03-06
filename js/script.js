@@ -46,13 +46,15 @@ $(document).ready(function (e) {
     });
 
     $(".filter").change(function (){
-        var type = $(this).attr("data-type");
-
-        filters[type] = $(this).val();
-        /*
-
         $(".marco").hide();
-        $("." + type + "-" + $(this).val()).show();*/
+        var selector = "";
+        $('.filter').each(function(){
+            if ($(this).val()!=""){
+                selector += "." + $(this).attr("data-type") + "-" + $(this).val();
+            }
+        });
+        console.log(selector);
+        $(selector).show()
     });
 
 
