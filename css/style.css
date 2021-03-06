@@ -15,7 +15,6 @@ body {
 .container {
     width: 90%;
     margin: 0 auto;
-    overflow: hidden;
     padding: 80px 0;
     max-width: 1200px;
 }
@@ -117,8 +116,6 @@ a:hover .desplegable {
     display: flex;
     height: calc(100vh - 70px);
     align-items: center;
-
-
 }
 
 .hero__texts {
@@ -163,11 +160,12 @@ a:hover .desplegable {
 
 }
 
-img {
-    float: left;
+.post .content{
+    display: inline-block;
 }
 
-.info__picture {
+.post .image {
+    float: left;
     clear: left;
     width: 200px;
     height: 200px;
@@ -175,17 +173,10 @@ img {
     margin-bottom: 10px;
     margin-right: 20px;
     object-fit: cover;
-    /*  */
 }
 
-
-h3.nombre {
+.post .name {
     color: var(--color-primary);
-}
-
-h3.consola {
-    color: var(--color-secondary);
-
 }
 
 h3 {
@@ -194,12 +185,13 @@ h3 {
 
 }
 
-.marco {
+.post {
     clear: both;
     border: 2px solid #000;
     padding: 2px;
     margin: 4px;
     min-height: 210px;
+    margin-top: 15px;
 }
 
 
@@ -251,4 +243,36 @@ a {
     transform: scale(1.12);
 }
 
+#posts{
+    margin-top: 30px;
+}
 
+.post{
+    transition: .5s all;
+}
+
+.post:hover{
+    transform: scale(1.02);
+}
+
+.post .image-col{
+    display: inline-block;
+    width: 20%;
+    height: 100%;
+}
+
+.post .content-col{
+    display: inline-block;
+    width: 70%;
+    height: 100% !important;
+}
+
+.post .image-container{
+    display: flex;
+    align-items: center;
+}
+
+.content{
+
+    height: 100%;
+}
