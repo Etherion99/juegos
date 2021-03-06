@@ -152,49 +152,6 @@ a:hover .desplegable {
     height: 100px;
 }
 
-/*Hasta aquí va lo de arriba*/
-
-.info {
-    padding-top: 0;
-    text-align: left;
-
-}
-
-.post .content{
-    display: inline-block;
-}
-
-.post .image {
-    float: left;
-    clear: left;
-    width: 200px;
-    height: 200px;
-    border: 2px solid #000;
-    margin-bottom: 10px;
-    margin-right: 20px;
-    object-fit: cover;
-}
-
-.post .name {
-    color: var(--color-primary);
-}
-
-h3 {
-    display: inline-flex;
-    justify-content: flex-start;
-
-}
-
-.post {
-    clear: both;
-    border: 2px solid #000;
-    padding: 2px;
-    margin: 4px;
-    min-height: 210px;
-    margin-top: 15px;
-}
-
-
 /*Pie de Página*/
 
 .footer {
@@ -207,6 +164,8 @@ h3 {
     overflow: hidden;
     transition: height 200ms;
 }
+
+/*custom*/
 
 A:link {
     text-decoration: none
@@ -248,6 +207,7 @@ a {
 }
 
 .post{
+    display: grid;
     transition: .5s all;
 }
 
@@ -255,24 +215,17 @@ a {
     transform: scale(1.02);
 }
 
-.post .image-col{
-    display: inline-block;
-    width: 20%;
-    height: 100%;
-}
-
-.post .content-col{
-    display: inline-block;
-    width: 70%;
-    height: 100% !important;
+.post .image{
+    width: 200px;
+    height: 200px;
 }
 
 .post .image-container{
-    display: flex;
-    align-items: center;
+    display: inline-grid;
+    width: 25%;
 }
 
-.content{
-
-    height: 100%;
+.post .content{
+    display: inline-grid;
+    width: 75%;
 }
