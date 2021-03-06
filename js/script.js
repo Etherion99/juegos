@@ -2,7 +2,8 @@ $(document).ready(function (e) {
     var filterOpts = {
         studio: [],
         category: [],
-        console: []
+        console: [],
+        year: []
     }
 
     //generación automática de posts
@@ -22,6 +23,10 @@ $(document).ready(function (e) {
             filterOpts.studio.push(post.studio);
         }
 
+        if (!filterOpts.year.includes(post.year)) {
+            filterOpts.year.push(post.year);
+        }
+
         for (var i = 0; i < post.categories.length; i++) {
             if (!filterOpts.category.includes(post.categories[i])) {
                 filterOpts.category.push(post.categories[i]);
@@ -39,6 +44,7 @@ $(document).ready(function (e) {
 
     $(".filter").each(function () {
         var type = $(this).attr("data-type");
+        filterOpts.year.sort();
         for (var option of filterOpts[type]) {
             $(this).append(`<option value='${option}'>${option}</option>`);
         }
