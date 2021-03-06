@@ -5,15 +5,17 @@ $(document).ready(function (e) {
     //generación automática de posts
     var postsHTML = "";
 
-    for(var post of posts){
+    for (var post of posts) {
         postsHTML += `<div class="post">
             <div class="image-container">
                 <img class="image" src="${post.photo}" alt="foto ${post.name}">
             </div>
-            <div class="content">
+            <div class="content">    
+                <p class="description">
                 <h3 class="title">${post.name}</h3>
                 <br><br>
-                <p class="description">${post.description}</p>
+                ${post.description}
+                </p>
             </div>
         </div>`;
     }
@@ -45,9 +47,9 @@ $(document).ready(function (e) {
         $(".gb").show();
     })
 
-    $("#myInput").on("keyup", function() {
+    $("#myInput").on("keyup", function () {
         var value = $(this).val().toLowerCase();
-        $("#myDIV .marco").filter(function() {
+        $("#myDIV .marco").filter(function () {
             $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
         });
     });
