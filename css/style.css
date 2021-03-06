@@ -207,8 +207,10 @@ a {
 }
 
 .post{
-    display: grid;
-    transition: .5s all;
+    display: inline-grid;
+    width: 100%;
+    grid-template-columns: auto auto;
+    margin: 15px 2px;
 }
 
 .post:hover{
@@ -223,14 +225,12 @@ a {
 .post .image-container{
     display: inline-grid;
     width: 25%;
+    text-align: justify;
 }
 
-<<<<<<< HEAD
-.content{
-    height: 100%;
-=======
 .post .content{
     display: inline-grid;
     width: 75%;
->>>>>>> d8f96f41c0dd3b6b7c0a759f2a15affe75cd3815
+    text-align: justify;
+    padding-left: 10px;
 }
