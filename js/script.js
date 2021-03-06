@@ -6,17 +6,14 @@ $(document).ready(function (e) {
     var postsHTML = "";
 
     for (var post of posts) {
-        postsHTML += `<div class="post">
-            <div class="image-container">
-                <img class="image" src="${post.photo}" alt="foto ${post.name}">
-            </div>
-            <div class="content">    
-                <p class="description">
-                <h3 class="title">${post.name}</h3>
-                <br><br>
-                ${post.description}
-                </p>
-            </div>
+        var categories = "category-" + post.categories.join(" category-");
+        var consoles = "console-" + post.consoles.join(" console-");
+
+        postsHTML += `<div class="marco gb year-${post.year} studio-${post.studio} ${categories} ${consoles}">
+            <img src="${post.photo}" class="info__picture">
+            <h3 class="consola">${post.console}</h3>
+            <h3 class="nombre">${post.name}</h3>
+            <p class="info__copy">${post.description}</p>
         </div>`;
     }
 

@@ -30,7 +30,7 @@ body{
 
 .hero{
     height: 100vh;
-    background-image: var(--background), url('assets/hero.jpg');
+    background-image: var(--background), url('../assets/hero.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -198,10 +198,10 @@ h3{
     clear: both;
     border: 2px solid #000;
     padding: 2px;
-    margin: 4px;
+    margin: 15px;
     min-height:210px;
+    transition: .5s all;
 }
-
 
 
 /*Pie de Página*/
@@ -217,4 +217,8 @@ h3{
 
     overflow: hidden;
     transition: height 200ms;
+}
+
+.marco:hover{
+    transform: scale(1.02);
 }

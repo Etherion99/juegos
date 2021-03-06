@@ -35,7 +35,7 @@ var posts = [
         ],
         year: 1999,
         studio: "Entertainment",
-        console: [
+        consoles: [
             "GameBoy"
         ]
     },
@@ -51,7 +51,7 @@ var posts = [
         ],
         year: 1996,
         studio: "Sony",
-        console: [
+        consoles: [
             "GameBoy",
             "Ds"
         ]
@@ -71,7 +71,7 @@ var posts = [
         ],
         year: 1994,
         studio: "Rockstar",
-        console: [
+        consoles: [
             "N64"
         ]
     },
@@ -98,7 +98,7 @@ var posts = [
         ],
         year: 1999,
         studio: "Entertainment",
-        console: [
+        consoles: [
             "GameBoy"
         ]
     },
@@ -126,7 +126,7 @@ var posts = [
         ],
         year: 1993,
         studio: "Entertainment",
-        console: [
+        consoles: [
             "N64",
             "GameBoy"
         ]
