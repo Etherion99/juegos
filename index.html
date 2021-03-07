@@ -44,20 +44,24 @@
     <section class="info container">
         <h2 class="subtitle">Más populares...</h2>
 
-        <input type="text" id="myInput" placeholder="Busca tu juego">
+        <form>
+            <input type="text" id="myInput" placeholder="Busca tu juego">
 
-        <select class="filter" id="category-filter" data-type="category">
-            <option value="">Categoría</option>
-        </select>
-        <select class="filter" id="console-filter" data-type="console">
-            <option value="">Consola</option>
-        </select>
-        <select class="filter" id="studio-filter" data-type="studio">
-            <option value="">Estudio desarrollador</option>
-        </select>
-        <select class="filter" id="year-filter" data-type="year">
-            <option value="">Año de lanzamiento</option>
-        </select>
+            <select class="filter" id="category-filter" data-type="category">
+                <option value="">Categoría</option>
+            </select>
+            <select class="filter" id="console-filter" data-type="console">
+                <option value="">Consola</option>
+            </select>
+            <select class="filter" id="studio-filter" data-type="studio">
+                <option value="">Estudio desarrollador</option>
+            </select>
+            <select class="filter" id="year-filter" data-type="year">
+                <option value="">Año de lanzamiento</option>
+            </select>
+            <input type="reset" id="reSet" value="Borrar información">
+        </form>
+
 
         <div id="posts">
 

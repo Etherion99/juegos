@@ -73,6 +73,12 @@ $(document).ready(function (e) {
 
     $("#myInput").on("keyup", filtering);
 
+    $("#reSet").click(function (event) {
+        event.preventDefault();
+        $(this).closest('form').get(0).reset();
+        filtering();
+    });
+
     $("#gb_button, .gb_button").click(function () {
         $(".ds").hide();
         $(".n64").hide();
