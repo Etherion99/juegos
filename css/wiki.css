@@ -5,6 +5,11 @@
     --boton-padding: 20px, 40px;
 }
 
+main{
+    display: flex;
+    align-items: start;
+}
+
 #title{
     font-weight: bold;
     color: var(--color-primary);;
@@ -13,11 +18,11 @@
 section{
     width: 60vw;
     display: inline-block;
-    margin: 30px 5vw;
+    margin: 30px 3vw;
 }
 
 aside{
-    width: 20vw;
+    width: 18vw;
     display: inline-block;
-    margin: 30px 5vw;
+    margin: 30px 3vw;
 }
