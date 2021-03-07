@@ -44,9 +44,12 @@
     <section class="info container">
         <h2 class="subtitle">Más populares...</h2>
 
+        <br><br>
         <form>
-            <input type="text" id="myInput" placeholder="Busca tu juego">
-
+            <div>
+                <input type="text" id="myInput" placeholder="Busca tu juego">
+                <button type="reset" id="reSet">Limpiar</button>
+            </div>
             <select class="filter" id="category-filter" data-type="category">
                 <option value="">Categoría</option>
             </select>
@@ -59,9 +62,8 @@
             <select class="filter" id="year-filter" data-type="year">
                 <option value="">Año de lanzamiento</option>
             </select>
-            <input type="reset" id="reSet" value="Borrar información">
         </form>
-
+        <br>
 
         <div id="posts">
 
