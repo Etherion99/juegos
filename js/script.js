@@ -17,10 +17,23 @@ $(document).ready(function (e) {
             <a href="wiki.html?index=${posts.indexOf(post)}">
                 <img src="${post.photo}" class="info__picture">
             </a>
-            <a href="wiki.html?index=${posts.indexOf(post)}">
+            <div class="text-container">
+                        <a href="wiki.html?index=${posts.indexOf(post)}">
                 <h3 class="nombre">${post.name}</h3>
             </a>
-            <p class="info__copy">${post.description}</p>
+            <p class="info__copy">${post.description}
+            </p>
+            </div>
+
+            <div class="characteristics">
+            <p>
+            <b>Consola: </b>${post.consoles.join(", ")}.
+            <b>Categoría: </b>${post.categories.join(", ")}. 
+            <b>Estudio: </b>${post.studio}. 
+            <b>Año de Lanzamiento: </b>${post.year}.
+            </p>
+
+            </div>
         </div>`;
 
         if (!filterOpts.studio.includes(post.studio)) {
