@@ -1,20 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,700;1,400&display=swap');
 
 
-
-
-:root{/*Pseudo clase para declarar variables*/
-    --background: linear-gradient(135deg, rgba(4, 132, 29, 0.494)  0%, rgba(245, 26, 15, 0.242) 100%);
+:root { /*Pseudo clase para declarar variables*/
+    --background: linear-gradient(135deg, rgba(4, 132, 29, 0.494) 0%, rgba(245, 26, 15, 0.242) 100%);
     --color-primary: #FF2700;
     --color-secondary: #764ba2;
     --boton-padding: 20px, 40px;
 }
 
-body{
+body {
     font-family: 'Raleway', sans-serif;
 }
 
-.container{
+.container {
     width: 90%;
     margin: 0 auto;
     overflow: hidden;
@@ -22,13 +20,13 @@ body{
     max-width: 1200px;
 }
 
-.subtitle{
+.subtitle {
     color: var(--color-primary);
     font-size: 2.5rem;
     margin-bottom: 35px;
 }
 
-.hero{
+.hero {
     height: 100vh;
     background-image: var(--background), url('../assets/hero.jpg');
     background-repeat: no-repeat;
@@ -40,12 +38,12 @@ body{
 }
 
 /*Los elementos hero de container no tendrán padding*/
-.hero .container{
+.hero .container {
     padding: 0;
 }
 
 /*Elementos de Navegación*/
-.nav{
+.nav {
 
     display: flex;
     justify-content: flex-end;
@@ -56,28 +54,29 @@ body{
 
 }
 
-.desplegable{
+.desplegable {
     display: none;
     list-style: none;
     padding: 0px;
 }
-li{
+
+li {
     padding: 3px
 }
 
-.nav a:hover, li:hover{
-    color:rgb(0, 0, 0);
+.nav a:hover, li:hover {
+    color: rgb(0, 0, 0);
 }
 
-a:hover .desplegable{
+a:hover .desplegable {
     display: block;
     position: absolute;
     list-style: none;
-    color:#fff;
+    color: #fff;
 }
 
-.nav2{
-    margin:0%;
+.nav2 {
+    margin: 0%;
     display: flex;
     justify-content: flex-start;
     float: left;
@@ -87,16 +86,15 @@ a:hover .desplegable{
 }
 
 
-
 /*Pie de página*/
-.nav--footer{
+.nav--footer {
     font-weight: 700;
     justify-content: flex-start;
     align-items: center;
 }
 
 /*Items de navegación*/
-.nav__items{
+.nav__items {
     color: #fff;
     text-decoration: none;
     margin-right: 2px;
@@ -105,18 +103,17 @@ a:hover .desplegable{
 
 }
 
-.nav__items--cta{
+.nav__items--cta {
     border: 1px solid #fff;
 }
 
 
-
 /*Items pie de página*/
-.nav__items--footer{
+.nav__items--footer {
     padding: 5px;
 }
 
-.hero__container{
+.hero__container {
     display: flex;
     height: calc(100vh - 70px);
     align-items: center;
@@ -124,33 +121,33 @@ a:hover .desplegable{
 
 }
 
-.hero__texts{
+.hero__texts {
     width: 80%;
     margin-bottom: 50px;
 
 }
 
-.hero__title{
+.hero__title {
     color: rgb(65, 3, 104);
     font-size: 3.2rem;
-    text-shadow: 1px  0px 0px rgb(255, 255, 255),
-    0px  1px 0px rgb(255, 255, 255),
-    -1px  0px 0px rgb(255, 255, 255),
+    text-shadow: 1px 0px 0px rgb(255, 255, 255),
+    0px 1px 0px rgb(255, 255, 255),
+    -1px 0px 0px rgb(255, 255, 255),
     0px -1px 0px rgb(255, 255, 255);
 }
 
-.hero__subtitle{
+.hero__subtitle {
     color: white;
     font-size: 2rem;
     font-weight: 300;
     margin: 15px 0;
-    text-shadow: 0.5px  0px 0px rgb(0, 0, 0),
-    0px  0.5px 0px rgb(0, 0, 0),
-    -0.5px  0px 0px rgb(0, 0, 0),
+    text-shadow: 0.5px 0px 0px rgb(0, 0, 0),
+    0px 0.5px 0px rgb(0, 0, 0),
+    -0.5px 0px 0px rgb(0, 0, 0),
     0px -0.5px 0px rgb(0, 0, 0);
 }
 
-.hero__wave{
+.hero__wave {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -160,16 +157,17 @@ a:hover .desplegable{
 
 /*Hasta aquí va lo de arriba*/
 
-.info{
+.info {
     padding-top: 0;
     text-align: left;
 
 }
 
-img{
+img {
     float: left;
 }
-.info__picture{
+
+.info__picture {
     clear: left;
     width: 200px;
     height: 200px;
@@ -181,36 +179,41 @@ img{
 }
 
 
-h3.nombre{
+h3.nombre {
     color: var(--color-primary);
 }
-h3.consola{
+
+h3.consola {
     color: var(--color-secondary);
 
 }
-h3{
+
+h3 {
     display: inline-flex;
     justify-content: flex-start;
 
 }
 
-.marco{
+.marco {
     clear: both;
     border: 2px solid #000;
-    padding: 2px;
+    padding: 15px;
     margin: 15px;
-    min-height:210px;
+    min-height: 250px;
     transition: .5s all;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    border-radius: 5px;
 }
 
+.marco img{
+    border-radius: 5px;
+}
 
 /*Pie de Página*/
 
-.footer{
+.footer {
     background-color: var(--color-primary);
 }
-
-
 
 
 #wrapper {
@@ -219,10 +222,8 @@ h3{
     transition: height 200ms;
 }
 
-.marco:hover{
+.marco:hover {
     transform: scale(1.02);
 }
 
 a, a:hover, a:visited{
-    text-decoration: none !important;
-}
