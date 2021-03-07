@@ -5,4 +5,7 @@ $(document).ready(function(){
     var post = posts[index];
 
     $("#title").text(post.name);
+    $("#description").text(post.description);
+    $("#aside-header h3").text(post.name);
+    $("#photo").attr("src", post.photo);
 });
