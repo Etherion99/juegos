@@ -14,8 +14,12 @@ $(document).ready(function (e) {
         var consoles = "console-" + post.consoles.join(" console-");
 
         postsHTML += `<div class="marco gb year-${post.year} studio-${post.studio} ${categories} ${consoles}">
-            <img src="${post.photo}" class="info__picture">
-            <h3 class="nombre">${post.name}</h3>
+            <a href="wiki.html?index=${posts.indexOf(post)}">
+                <img src="${post.photo}" class="info__picture">
+            </a>
+            <a href="wiki.html?index=${posts.indexOf(post)}">
+                <h3 class="nombre">${post.name}</h3>
+            </a>
             <p class="info__copy">${post.description}</p>
         </div>`;
 
