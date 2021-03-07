@@ -222,3 +222,7 @@ h3{
 .marco:hover{
     transform: scale(1.02);
 }
+
+a, a:hover, a:visited{
+    text-decoration: none !important;
+}
