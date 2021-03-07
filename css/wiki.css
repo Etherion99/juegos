@@ -1,30 +1,31 @@
 :root{/*Pseudo clase para declarar variables*/
     --background: linear-gradient(135deg, rgba(4, 132, 29, 0.494)  0%, rgba(245, 26, 15, 0.242) 100%);
     --color-primary: #FF2700;
-    --boton-padding: 20px, 40px;
     --color-secondary: #764ba2;
+    --boton-padding: 20px, 40px;
+}
+
 main{
-    align-items: start;
-
-}
     display: flex;
-
+    align-items: start;
 }
+
 #title{
     font-weight: bold;
-}
     color: var(--color-primary);;
+}
 
 section{
     width: 60vw;
     display: inline-block;
-}
     margin: 30px 3vw;
+}
 
 aside{
-    display: inline-block;
     width: 18vw;
+    display: inline-block;
     margin: 30px 3vw;
     border-radius: 10px;
     border: 2px solid #666666;
+
 }
